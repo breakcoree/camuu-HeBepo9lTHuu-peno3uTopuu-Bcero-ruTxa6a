@@ -1,10 +1,10 @@
-/*  #95b806
-    #dbdbdb
-*/
+/* #95b806 - зеленый */
+/* #dbdbdb - серый фон */
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .body {
@@ -12,40 +12,145 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .main {
     display: flex;
-    background: #FFFFFF;
+    background: white;
     width: 1000px;
-    height: 932px;
-    border-radius: 25px;
-    overflow: hidden;
+    height: 700px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Левая панель */
 .left_bar {
+    width: 300px;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
+    border-right: 1px solid #e0e0e0;
     display: flex;
-    width: 370px;
-    height: 100%;
-    background: #FCFBFC;
-    justify-content: center;
-    border-right: 1px solid;
-    border-color: #F0F0F0;
+    flex-direction: column;
 }
 
 .title {
-    font-size: 40px;
-    margin-top: 38px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .new_note_button {
-    display: inline-block;
-    width: 310px;
-    height: 60px;
+    background: #95b806;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.new_note_button:hover {
+    background: #8bae05;
+}
+
+.tags_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title_tags {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.tags_item {
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.tags_item:hover {
+    background: #f0f0f0;
+}
+
+/* Правая панель */
+.main_bar {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search_box {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.note_input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.search_button {
+    background: #95b806;
+    border: none;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search_button:hover {
+    background: #8bae05;
+}
+
+.notes_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.note {
+    background: #f9f9f9;
     border-radius: 10px;
-    font-size: 25px;
-    color: #FFFFFF;
-    border: 0px;
-    background-color: #4499FF;
-    margin-top: 523;
+    padding: 20px;
+    border-left: 4px solid #95b806;
+    border-right: 4px solid #dadada6e;
+}
+
+.note_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.note_tag {
+    color: #95b806;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.note_date {
+    color: #666;
+    font-size: 14px;
 }
